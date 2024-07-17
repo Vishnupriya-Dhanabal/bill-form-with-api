@@ -1,0 +1,46 @@
+body {
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+.text-center{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+
+.register-form {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 1px 2px 13px 2px black;
+    padding: 30px;
+    border-radius: 15px;
+    width: 85%;
+   
+}
+
+.register-form h2 {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+.social-icons img {
+    width: 40px;
+    margin: 0 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+}

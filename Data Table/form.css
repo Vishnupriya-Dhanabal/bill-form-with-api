@@ -1,24 +1,21 @@
-body {
-    font-family: Arial, sans-serif;
-    height: 100%;
-    margin-top: -20px;
 
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 header {
-    text-align: center;
-    padding: 25px;
-    margin-top: 15px;
-   
-    background-color: #333;
-    color: #fff;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
 }
 #product{
   text-align: center;
 }
-
-
-
 input[type="text"],
 input[type="number"],
 input[type="date"] {
@@ -27,12 +24,10 @@ input[type="date"] {
     border-radius: 3px;
     border: 1px solid #ccc;
 }
-
 table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
-
 table th,
 table td {
     padding: 8px;
@@ -40,55 +35,31 @@ table td {
     border-bottom: 1px solid #ccc;
 }
 button {
-    margin-top: 10px;
-    padding: 8px 16px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-#customer-name{
-  width: 236px;
+.container-custom {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  padding: 20px;
+}
 
- }
- 
-  #phone-number{
-    width: 260px;
-  }
-  #phone{
-    margin-left: 350px;
-   margin-top: -180px;
-  }
-  #email{
-    width: 260px;
-  }
-  #mail{
-    margin-left: 720px;
-    margin-top: -88px;
-  }
+.table-responsive {
+  margin-top: 20px;
+}
 
-  #purchase-date{
-  width: 230px;
-  
- }
- #Purchase{
-  margin-left: 720px;
-  margin-top:-4px;
- }
- #address{
-  width: 260px;
-  
- }
-#gen{
-  width: 260px;
-  margin-left: 350px;
-  margin-top: -90px;
-  
+.table th, .table td {
+  text-align: center;
+  vertical-align: middle;
 }
 #deteils{
-  height: 250px;
+  height: 350px;
   border: 1px solid;
   margin-top: 20px;
   box-shadow: 2px 0px 8px 2px;
@@ -96,35 +67,83 @@ button {
 
 }
 #show{
-    width: 1000%;
-  
-   margin-left: -30px;
-  margin-top: 140px;
-  border: 1px solid;
-  box-shadow: 2px 0px 8px 2px;
-  border-radius: 8px;
+ width: 1150px;
+ margin-left: -20px;
+margin-top: 80px;
+border: 1px solid;
+box-shadow: 2px 0px 8px 2px;
+border-radius: 8px;
 }
 .total{
-  margin-left: 59%;
+  margin-right: 15%;
   margin-top:-40px;;
+}
+.text{
+  margin-right: -24%;
+
+}
+.hd{
+  margin-top: -30px;
 }
 #add{
   margin-left: 950px;
-  margin-top: -85px;
+  margin-top: -212px;
   width: 120px;
- 
-  
 }
 #bill{
   margin-left: 600px;
 }
-
 .but{
-    margin-left: 790px;
-    margin-top: 30px;
-    padding: 5px;
+  margin-left: 790px;
+  margin-top: 30px;
+  padding: 5px;
 }
-  
+.head{
+  /* width: auto; */
+  padding: 15px;
+    font-family: 'Times New Roman', Times, serif;
+  background-color: lightblue;
+  text-align: center;
+}
+.list{
+  padding: 15px;
+margin-top: -20px;
+  background-color: lightblue;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+#save{
+  margin-left: 58%;
+  margin-right: 10px;
+}
+.button{
+  margin-top: 30px;
+}
 
 
+@media (max-width: 576px) {
+  .form-row .col-md-6 {
+      flex: 0 0 100%;
+      max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .form-row .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .form-row .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
 
