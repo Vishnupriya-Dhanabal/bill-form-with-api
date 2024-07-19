@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="addproduct.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="addproduct.js"></script>
 </head>
 <body>
     <div class="container">
@@ -15,18 +16,18 @@
             <div class="col-md-6">
                 <div class="register-form">
                     <h2 class="text-center">Add Product</h2>
-                    <form>
+                    <form id="yourFormId">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter productName" required>
+                            <input type="text" class="form-control" id="productName" name="productName" placeholder="Enter productName" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Quantity" required>
+                            <input type="text" class="form-control" id="productQuantity" name="productQuantity" placeholder="Enter Quantity" required>
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter price" required>
+                            <input type="text" class="form-control" id="price" name="price" placeholder="Enter price" required>
                         </div>
                     
-                        <button type="submit" class="btn btn-primary btn-block">Added</button>
+                        <button type="submit" class="btn btn-primary btn-block" onclick="handleSubmit(event)">Added</button>
                     </form>
                    
                 </div>
