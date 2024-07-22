@@ -9,52 +9,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- <script>
-        document.addEventListener('DOMContentLoaded', function() {
-      
-            $.ajax({
-                url: 'http://localhost:8080/api/product/add/product',
-                type: 'GET',
-                success: function(formDataArray) {
-                    const tbody = document.getElementById('data-table').getElementsByTagName('tbody')[0];
-                    formDataArray.forEach(data => {
-                        const row = tbody.insertRow();
-
-                        const customerNameCell = row.insertCell();
-                        customerNameCell.textContent = data['customer-name'];
-
-                        const purchaseDateCell = row.insertCell();
-                        purchaseDateCell.textContent = data['purchase-date'];
-
-                        const phoneNumberCell = row.insertCell();
-                        phoneNumberCell.textContent = data['phone-number'];
-
-                        const emailCell = row.insertCell();
-                        emailCell.textContent = data.email;
-
-                        const addressCell = row.insertCell();
-                        addressCell.textContent = data.address;
-
-                        const genderCell = row.insertCell();
-                        genderCell.textContent = data.gender;
-
-                        const actionCell = row.insertCell();
-                        const invoiceButton = document.createElement('button');
-                        invoiceButton.textContent = 'Invoice';
-                        invoiceButton.className = 'btn btn-primary';
-                        invoiceButton.onclick = function() {
-                          
-                            window.location.href = "invoice.html?id=" + data.id;
-                        };
-                        actionCell.appendChild(invoiceButton);
-                    });
-                },
-                error: function(error) {
-                    console.error('Error fetching data:', error);
-                }
-            });
-        });
-    </script> -->
 </head>
 <body>
     <header class="bg-dark text-white text-center py-3">

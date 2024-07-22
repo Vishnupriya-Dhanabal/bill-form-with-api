@@ -60,7 +60,7 @@ button {
   vertical-align: middle;
 }
 #deteils{
-  height: 350px;
+  height: 380px;
   border: 1px solid;
   margin-top: 20px;
   box-shadow: 2px 0px 8px 2px;
@@ -85,6 +85,9 @@ border-radius: 8px;
 }
 .hd{
   margin-top: -30px;
+}
+.shop{
+  margin-top: 40px;
 }
 #add{
   margin-left: 950px;
