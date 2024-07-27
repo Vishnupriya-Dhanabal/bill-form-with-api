@@ -43,6 +43,12 @@ button {
   border-radius: 3px;
   cursor: pointer;
 }
+.container {
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  /* padding: 20px; */
+  padding-top: 20px;
+}
 
 .container-custom {
   background-color: #f8f9fa;
@@ -60,16 +66,16 @@ button {
   vertical-align: middle;
 }
 #deteils{
-  height: 380px;
+  height: 440px;
   border: 1px solid;
   margin-top: 20px;
+  /* margin-bottom: 80px; */
   box-shadow: 2px 0px 8px 2px;
   border-radius: 8px;
 
 }
 #show{
- /* width: 1150px; */
- margin-left: -20px;
+margin-left: -20px;
 margin-top: 80px;
 border: 1px solid;
 box-shadow: 2px 0px 8px 2px;
@@ -88,10 +94,11 @@ border-radius: 8px;
 }
 .shop{
   margin-top: 40px;
+  width: 100%;
 }
 #add{
   margin-left: 950px;
-  margin-top: -212px;
+  margin-top: -115px;
   width: 120px;
 }
 #bill{
@@ -103,26 +110,25 @@ border-radius: 8px;
   padding: 5px;
 }
 .head{
-  /* width: auto; */
   padding: 15px;
-    font-family: 'Times New Roman', Times, serif;
-  background-color: lightblue;
+  margin-top:-20px;
+ background-color: lightblue;
   text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  
 }
 .list{
   padding: 15px;
-margin-top: -20px;
+  margin-top:-20px;
   background-color: lightblue;
   text-align: center;
   font-family: 'Times New Roman', Times, serif;
 }
-#save{
-  margin-left: 58%;
-  margin-right: 10px;
+.but{
+  margin-right: 100px;
 }
-.button{
-  margin-top: 30px;
-}
+
+
 
 
 @media (max-width: 576px) {
