@@ -1,16 +1,5 @@
 
 
-
-// Products array
-var products = [
-    { name: "Select a product", price: 0, quantity: 0 },
-    { name: "Headphones", price: 19, quantity: 40 },
-    { name: "Laptop", price: 799, quantity: 40 },
-    { name: "Wireless Mouse", price: 24, quantity: 40 },
-    { name: "Smartwatch", price: 129, quantity: 40 },
-    { name: "Gaming Keyboard", price: 49, quantity: 40 }
-];
-
 // Add row function
 function addRow() {
     var table = document.getElementById("bill-table").getElementsByTagName('tbody')[0];
@@ -259,3 +248,29 @@ function handleSubmit(event) {
         }
     });
 }
+
+//  get product 
+function fetchProductList() {
+    fetch('http://localhost:8080/api/product/get/All/product')
+        .then(response => {
+            if (!response.ok) {
+                return response.json().then(data => {
+                    throw new Error(`API Error: ${data.error.code} - ${data.error.reason}`);
+                });
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Product List:', data);
+            // Process the data and update the UI as needed
+            populateProductDropdown(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            alert('Failed to fetch product list. Please try again later.');
+        });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    fetchProductList();
+});
