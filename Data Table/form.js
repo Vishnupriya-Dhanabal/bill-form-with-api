@@ -1,4 +1,30 @@
+let dataArray = [];
 
+function fetchData() {
+  fetch("http://localhost:8080/api/product/get/All/product")
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Network response was not ok.");
+      }
+    })
+    .then((data) => {
+      if (dataArray.length === 0) { 
+        console.log("The array is empty.");
+      }
+
+      dataArray.push(data);
+    })
+    .catch((error) => {
+      console.error(
+        "There has been a problem with your fetch operation:",
+        error
+      );
+    });
+}
+
+fetchData();
 
 // Add row function
 function addRow() {
@@ -19,16 +45,9 @@ function addRow() {
     productSelect.name = "productName";
     productSelect.onchange = function() { 
         setPrice(this); 
-        validateRows(); 
+        validateRows();
+        populateDropdown(dataArray) 
     };
-
-    products.forEach(function(product) {
-        var option = document.createElement("option");
-        option.value = product.name;
-        option.setAttribute("data-price", product.price);
-        option.textContent = product.name;
-        productSelect.appendChild(option);
-    });
 
     productCell.appendChild(productSelect);
     quantityCell.innerHTML = '<input type="number" class="form-control" name="quantity" placeholder="Enter quantity" onchange="calculateAmount(this.parentElement.parentElement); validateRows();">';
@@ -37,6 +56,21 @@ function addRow() {
     actionCell.innerHTML = '<button type="button" class="btn btn-danger" onclick="deleteRow(this)">Delete</button>';
 
     validateRows(); // Validate all rows immediately after adding
+}
+
+function populateDropdown(dataArray) {
+    var productSelect = document.getElementById('productName');
+    productSelect.innerHTML = '<option value="" data-price="0">Select a product</option>'; 
+console.log(dataArray)
+        dataArray.forEach(function(product) {
+            console.log(product)
+            var option = document.createElement("option");
+            option.value = product.data.name;
+            option.setAttribute("data-price", product.price);
+            option.textContent = product.name;
+            productSelect.appendChild(option);
+        });
+    
 }
 
 // Validate all rows and manage "Add Row" button state
@@ -67,7 +101,7 @@ function deleteRow(button) {
 function setPrice(selectElement) {
     var price = selectElement.options[selectElement.selectedIndex].getAttribute('data-price');
     var row = selectElement.parentElement.parentElement;
-    row.querySelector('input[name="price"]').value = price;
+    row.querySelector('input[name="price"]').value = price || 0;
     calculateAmount(row);
 }
 
@@ -249,28 +283,6 @@ function handleSubmit(event) {
     });
 }
 
-//  get product 
-function fetchProductList() {
-    fetch('http://localhost:8080/api/product/get/All/product')
-        .then(response => {
-            if (!response.ok) {
-                return response.json().then(data => {
-                    throw new Error(`API Error: ${data.error.code} - ${data.error.reason}`);
-                });
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Product List:', data);
-            // Process the data and update the UI as needed
-            populateProductDropdown(data);
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Failed to fetch product list. Please try again later.');
-        });
-}
 
-document.addEventListener('DOMContentLoaded', function() {
-    fetchProductList();
-});
+
+
