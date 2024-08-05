@@ -10,12 +10,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="customer.js"></script>
+    
 </head>
 <body>
-    <header class="bg-dark text-white text-center hd">
+    <header class="bg-dark text-white text-center py-3">
         <h1 class="shop">Shopping Bill Generator</h1>
     </header>
-    <div id="details" class="container">
+    <div id="details" class="container mt-5">
         <h4 class="head text-center">Customer Details</h4>
         <form id="billing-form" onsubmit="handleSubmit(event)">
             <div class="container-custom page1 mt-5">
@@ -61,9 +62,10 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div id="show" class="container-custom ">
-                <h4 class=" listtable text-center ">Billing List</h4>
+            <div id="show" >
+                <h4 class="listtable text-center">Billing List</h4>
                 <div class="text-right">
                     <button id="add" type="button" class="btn btn-success mb-2" onclick="addRow()">+ Add Row</button>
                 </div>
@@ -80,7 +82,6 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Rows will be added here dynamically -->
                             <tr>
                                 <td>
                                     <ol><li class="list"></li></ol>
@@ -115,11 +116,13 @@
                     <h4>Total: $<span id="total">0.00</span></h4>
                 </div>
             </div>
-            <div class=" but text my-4 lastbtn text-right">
+            <div class="but text my-4 lastbtn text-right">
                 <input id="save" type="submit" class="btn btn-success" value="Save">
                 <input id="can" type="button" class="btn btn-danger" value="Cancel">
             </div>
         </form>
-    </div>
+   
 </body>
 </html>
+
+

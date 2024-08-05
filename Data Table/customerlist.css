@@ -1,28 +1,23 @@
-body{
-    overflow-x: hidden;
-    padding-bottom: 40px;
-    width: 97%;
-    padding-left: 15px;
-}
-.data{
-    text-align: center;
-  
-}
-.in{
-    align-items: center;
-}
-
-table {
-            width: 100%;
-            border-collapse: collapse;
+  body{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     }
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-left: 140px;
         }
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
         }
         th {
-           
-            background-color: rgb(5, 12, 75);
+            background-color: #070344;
             color: white;
-            box-shadow: 1px 2px 13px 2px ;
+            padding: 20px;
         }
+        .in {
+            margin-left: 500px;
+            padding-bottom: 30px;
+        }
+  
+     

@@ -1,0 +1,21 @@
+.container{
+ margin-left: 20%;
+}
+
+.top{
+    background-image:url(4-48532_wave-png-transparent-image-blue-wave-vector-png.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 55%;
+}
+.invo{
+   margin-top: 15%;
+}
+.toper{
+    margin-top: 15%;
+    margin-left: 20%;
+    color:white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+   font-style: italic;
+   position: relative;
+}
